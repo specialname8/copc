@@ -14,9 +14,16 @@
  <div id='outer'>
    <input onpaste="javascript:alert('')"/>
    <a href="tel:13626391075">13626391075</a>
- <span class="content">width:auto;height:auto;border:1px solid #333;background:#999;width:auto;height:auto;border:1px soliwidth:auto;height:auto;border:1px solid #333;background:#999;width:auto;height:auto;border:1px solid #333;background:#999;d #333;background:#999;width:auto;height:auto;border:1px solid #333;background:#999;aaaa</span>
- <span class="content">width:auto;height:auto;border:1px solid #333;background:#999;width:auto;height:auto;border:1px soliwidth:auto;height:auto;border:1px solid #333;background:#999;width:auto;height:auto;border:1px solid #333;background:#999;d #333;background:#999;width:auto;height:auto;border:1px solid #333;background:#999;bbbb</span>
- <span class="content">width:auto;height:auto;border:1px solid #333;background:#999;width:auto;height:auto;border:1px soliwidth:auto;height:auto;border:1px solid #333;background:#999;width:auto;height:auto;border:1px solid #333;background:#999;d #333;background:#999;width:auto;height:auto;border:1px solid #333;background:#999;cccc</span>
+   <button onclick="javascript:dial()">anchor</button>
+   <script type="text/javascript">
+     function dial() {
+      let anchor = document.createElement("a");
+      anchor.setAttribute("name","http://www.baidu.com/");
+      anchor.setAttribute("href","tel:13626391075");
+      // document.appendChild(anchor);
+      anchor.click();
+     }
+   </script>
  </div>
 </body>
 </html>
