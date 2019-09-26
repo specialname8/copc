@@ -7,8 +7,10 @@ window.g={
 // PORT:"8088/mbser/",
 test_getMessages:'./static/getMessages.json',
 test_getOneMessages:'./static/getOneMessages.json',
+test_getMessagesWX:'./static/getMessagesWX.json',
 test_sciencepopularizations:'./static/sciencepopularizations.json',
 // test_getMessages:'',
 // test_getOneMessages:'',
+// test_getMessagesWX:'',
 // test_sciencepopularizations:'',
 }
