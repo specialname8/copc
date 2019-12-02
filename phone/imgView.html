@@ -7,13 +7,13 @@
 </head>
 <body>
  <div id='outer'>
-   <input onpaste="javascript:alert('')"/>
+   <input onpaste="javascript:alert('')"/>3<br>
    <img src="gis.png" width="200px" height="100px" onclick="preview()">
    <script type="text/javascript">
      function preview() {
         wx.previewImage({
-          current: './gis.png', // 当前显示图片的http链接
-          urls: ['./gis.png'] // 需要预览的图片http链接列表
+          current: 'https://specialname8.github.io/copc/phone/gis.png', // 当前显示图片的http链接
+          urls: ['https://specialname8.github.io/copc/phone/gis.png'] // 需要预览的图片http链接列表
         });
      }
    </script>
