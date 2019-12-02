@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <title></title>
+ <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+</head>
+<body>
+ <div id='outer'>
+   <input onpaste="javascript:alert('')"/>
+   <img src="gis.png" width="200px" height="100px" onclick="preview()">
+   <script type="text/javascript">
+     function preview() {
+        wx.previewImage({
+          current: 'gis.png', // 当前显示图片的http链接
+          urls: ['gis.png'] // 需要预览的图片http链接列表
+        });
+     }
+   </script>
+ </div>
+</body>
+</html>
