@@ -7,6 +7,7 @@
 </head>
 <body>
  <div id='outer'>
+    <button onclick="getpos()">weixin position</button> <br>
    <input onpaste="javascript:alert('')"/>3<br>
    <img src="gis.png" width="200px" height="100px" onclick="preview()">
    <script type="text/javascript">
@@ -15,6 +16,18 @@
           current: 'https://specialname8.github.io/copc/phone/gis.png', // 当前显示图片的http链接
           urls: ['https://specialname8.github.io/copc/phone/gis.png'] // 需要预览的图片http链接列表
         });
+     }
+     function getpos() {
+      wx.getLocation({
+					type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+					success: function (res) {
+						alert(res);
+						var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+						var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+						var speed = res.speed; // 速度，以米/每秒计
+						var accuracy = res.accuracy; // 位置精度
+					}
+				});
      }
    </script>
  </div>
