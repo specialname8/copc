@@ -12,13 +12,21 @@
     <button onclick="getpos()">weixin position</button> <br>
     <button onclick="getLocation()">html position</button> <br>
     <input onpaste="javascript:alert('')" />3<br>
-    <img src="gis.png" width="200px" height="100px" onclick="preview()">
+    <img src="gis.png" width="200px" height="100px" onclick="preview()"><br>
+    <img src="gis.png" width="200px" height="100px" onclick="previewRelative(event)">
     <script type="text/javascript">
       function preview() {
         wx.previewImage({
           current: 'https://specialname8.github.io/copc/phone/gis.png', // 当前显示图片的http链接
           urls: ['https://specialname8.github.io/copc/phone/gis.png'] // 需要预览的图片http链接列表
         });
+      }
+      function previewRelative(e) {
+				let src=e.srcElement.src;
+				wx.previewImage({
+					current: src, // 当前显示图片的http链接
+					urls: [src] // 需要预览的图片http链接列表
+					});
       }
 
       function getpos() {
