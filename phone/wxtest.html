@@ -30,8 +30,8 @@
       function previewRelative(e) {
 				let src=e.srcElement.src;
 				wx.previewImage({
-					current: src, // 当前显示图片的http链接
-					urls: [src] // 需要预览的图片http链接列表
+					current: src.toString(), // 当前显示图片的http链接
+					urls: [src.toString()] // 需要预览的图片http链接列表
 					});
       }
 
