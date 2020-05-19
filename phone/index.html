@@ -1,31 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
 <head>
- <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
- <title></title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js"></script>
+  <title></title>
 </head>
+
 <body>
- <style type="text/css">
-   .outer{width:100%;height:auto;overflow:Auto}
-  .content{width:auto;height:auto;border:1px solid #333;background:#999;
-  white-space:nowrap}
- </style>
- <div id='outer'>
-   <input onpaste="javascript:alert('')"/>
-   <a href="tel:13626391075">13626391075</a>
-   <button onclick="javascript:dial()">anchor</button>
-   <script type="text/javascript">
-     function dial() {
-      let anchor = document.createElement("a");
-      // anchor.setAttribute("name","http://www.baidu.com/");
-      anchor.setAttribute("href","tel:13626391075");
-      // document.appendChild(anchor);
-      anchor.click();
-     }
-   </script>
- </div>
- <a href="wxtest.html">wxtest</a>
- <a href="gaode.html">gaode</a>
+  <style type="text/css">
+    .outer {
+      width: 100%;
+      height: auto;
+      overflow: Auto
+    }
+
+    .content {
+      width: auto;
+      height: auto;
+      border: 1px solid #333;
+      background: #999;
+      white-space: nowrap
+    }
+  </style>
+  <div id='outer'>
+    <input onpaste="javascript:alert('')" />
+    <a href="tel:13626391075">13626391075</a>
+    <button onclick="javascript:dial()">anchor</button>
+    <script type="text/javascript">
+      function dial() {
+        let anchor = document.createElement("a");
+        // anchor.setAttribute("name","http://www.baidu.com/");
+        anchor.setAttribute("href", "tel:13626391075");
+        // document.appendChild(anchor);
+        anchor.click();
+      }
+     //https://specialname8.github.io/copc/dist/phone/datetest.html
+    </script>
+  </div>
+  <a href="wxtest.html">wxtest</a>
+  <a href="gaode.html">gaode</a>
 </body>
+
 </html>
