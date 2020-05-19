@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title></title>
+</head>
+
+<body>
+  <div>
+    <input id='txt' type="text" value='2019-09-23 18:01:13'></input>
+    <button onclick="test()">test</button>
+  </div>
+  <div>
+    <span>OLD Date</span><span id='o1'></span>
+  </div>
+  <div>
+    <span>New Date</span><span id='o2'></span>
+  </div>
+  <script type="text/javascript">
+    var txt = document.getElementById('txt');
+    var o1 = document.getElementById('o1');
+    var o2 = document.getElementById('o2');
+
+    function test() {
+      o1.innerText = getDateString(txt.value);
+      o2.innerText = getDateString2(txt.value);
+    }
+    function getDateString(dt) {
+      let r = '';
+      try {
+        let d = new Date(Date.parse(dt));
+        r = `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
+      } catch (e) {
+        console.log(dt, e);
+      }
+      return r;
+    }
+    function getDateString2(dt) {
+      let r = '';
+      try {
+        let d = new Date(Date.parse(dt));
+        if (!d) {
+          d = new Date(Date.parse(dt.replace(/-/g, '/')));
+        }
+        r = `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
+      } catch (e) {
+        console.log(dt, e);
+      }
+      return r;
+    }
+  </script>
+</body>
+
+</html>
