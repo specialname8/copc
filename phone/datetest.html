@@ -17,14 +17,22 @@
   <div>
     <span>New Date</span><span id='o2'></span>
   </div>
+  <div id='o3'>
+  </div>
   <script type="text/javascript">
+    var odt = '2019-09-23 18:01:13';
     var txt = document.getElementById('txt');
     var o1 = document.getElementById('o1');
     var o2 = document.getElementById('o2');
+    var o3 = document.getElementById('o3');
 
     function test() {
+      test2();
       o1.innerText = getDateString(txt.value);
       o2.innerText = getDateString2(txt.value);
+    }
+    function writeLine(s) {
+      o3.innerHTML = o3.innerHTML + s + '</br>'
     }
     function getDateString(dt) {
       let r = '';
@@ -39,17 +47,20 @@
     function getDateString2(dt) {
       let r = '';
       try {
-        let d = new Date(Date.parse(dt));
-        if (!d) {
-          d = new Date(Date.parse(dt.replace(/-/g, '/')));
-        }
+        d = new Date(Date.parse(dt.replace(/-/g, '/')));
         r = `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${d.getMinutes()}`;
       } catch (e) {
         console.log(dt, e);
       }
       return r;
     }
+    function test2() {
+      writeLine('src:' + odt);
+      writeLine('dt1:' + new Date(odt));
+      writeLine('dt2:' + new Date(odt.replace(/-/g, '/')));
+    }
     test();
+    test2();
   </script>
 </body>
 
